@@ -184,7 +184,7 @@ module.exports = function(grunt) {
             var localDir = path.split('/')[1];
             var project = grunt.file.readJSON(jsonFile);
             var embed = path + '/embed.html';
-            var documentBody = '<!DOCTYPE html><html><head><style>' + css + '</style></head><body>';
+            var documentBody = '<!DOCTYPE html><html><head><meta charset="UTF-8"><style>' + css + '</style></head><body>';
             if (grunt.file.exists(path + '/hashmap.json')) {
                 var hashedMap = grunt.file.readJSON(path + '/hashmap.json');
             }
