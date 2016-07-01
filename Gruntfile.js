@@ -184,12 +184,13 @@ module.exports = function(grunt) {
             var localDir = path.split('/')[1];
             var project = grunt.file.readJSON(jsonFile);
             var embed = path + '/embed.html';
+            var documentBody = '<!DOCTYPE html><html><head><style>' + css + '</style></head><body>';
             if (grunt.file.exists(path + '/hashmap.json')) {
                 var hashedMap = grunt.file.readJSON(path + '/hashmap.json');
             }
 
             project['html'] = '<div class="' + localDir + '__wrapper">' + '<style>' + css + '</style>' + html + '</div>';
-            var embedHtml = '<style>' + css + '</style>' + html + '</div>';
+            var embedHtml = documentBody + html + '</body></html>';
             grunt.file.expand({}, dir + '/_source/*').forEach(function(file) {
                 file = file.split("/");
                 file = file[file.length-1];
