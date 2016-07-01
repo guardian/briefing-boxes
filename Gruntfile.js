@@ -220,7 +220,7 @@ module.exports = function(grunt) {
             var project = grunt.file.readJSON(dir + '/source.json');
             var s3Path = 'https://interactive.guim.co.uk/' + remoteDir + '/embed.html';
             var cssPath = 'https://interactive.guim.co.uk/' + remoteDir + '/style.css';
-            var localPath = 'http://localhost:8000/' + dir + '/source.json';
+            var localPath = 'http://localhost:8000/' + dir + '/embed.html';
             function returnSnapPath(location) {
                 // return project.url + '?gu-snapType=json.html&gu-snapUri=' + encodeURIComponent(location) + '&gu-headline=' + encodeURIComponent(project.headline) + '&gu-trailText=' + encodeURIComponent(project.trailText);
                 return project.url;
@@ -228,6 +228,7 @@ module.exports = function(grunt) {
 
             grunt.log.writeln('S3 Path: '['yellow'].bold + s3Path);
             grunt.log.writeln('css Path: '['blue'].bold + cssPath);
+            grunt.log.writeln('localhost: '['red'].bold + localPath);
         }
     });
 
