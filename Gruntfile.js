@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     var scss = 'embeds/' + (grunt.option('folderName') ? grunt.option('folderName') + '/*.scss' : '**/*.scss');
     var html = 'embeds/' + (grunt.option('folderName') ? grunt.option('folderName') + '/*.html' : '**/*.html');
     var source = 'embeds/' + (grunt.option('folderName') ? grunt.option('folderName')+ '/_source/*' : '**/source/*');
-    var remoteDir = 'article-embeds/' + (grunt.option('folderName') ? grunt.option('folderName') : '');
+    var remoteDir = 'embeds/article-embeds/' + (grunt.option('folderName') ? grunt.option('folderName') : '');
 
     grunt.initConfig({
         watch: {
