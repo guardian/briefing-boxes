@@ -1,0 +1,272 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+// Base
+body {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .wrapper {
+    @media (min-width: 380px) and (max-width: 380px) {
+      float: right;
+    }
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    border: 0;
+    display: block;
+  }
+}
+
+// Podcard styles
+#podcard-player {
+  width: 300px; // the whole thing scales based on this attribute
+  position: relative;
+
+  #podcard-audio {
+    display: none;
+  }
+
+  .podcard {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom: 2px;
+    color: #333;
+
+    &__control {
+      &-play,
+      &-pause {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 29.34%;
+        height: 29.34%;
+        transition: all 400ms;
+      }
+      &-play {
+        z-index: 22;
+      }
+      &-pause {
+        z-index: 21;
+        animation-delay: 200ms;
+        animation-name: pause-puslate;
+        animation-duration: 1000ms;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    }
+    &__progress-bar,
+    &__artwork {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img, svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    &__artwork {
+      z-index: 10;
+    }
+    &__progress-bar {
+      z-index: 11;
+      transform: rotate(-120deg);
+    }
+    &__headline {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 11;
+      font-family: 'Guardian Egyptian Headline';
+      font-weight: 700;
+      width: 46%;
+      font-size: 20px;
+      line-height: 21px;
+      transform: translateY(-50%);
+      padding: 5.6%;
+      margin-top: 3px;
+    }
+    &__subscribe {
+      z-index: 20;
+      position: absolute;
+      bottom: 16.67%;
+      left: 0;
+      background-color: #fb0;
+      padding: 5px 13px 5px 30px;
+      border-radius: 15px;
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      border: 0;
+      &--icon {
+        width: 17px;
+        height: 14px;
+        position: absolute;
+        left: 6px;
+        top: 8px;
+      }
+      &--text {
+        display: inline-block;
+        vertical-align: middle;
+        // @include guss-webfonts('Guardian Agate Sans 1 Web' 'Guardian Sans Web');
+        font-family: 'Guardian Agate Sans';
+        font-weight: 700;
+        font-size: 15px;
+        margin-bottom: 1.5px;
+        line-height: 16px;
+        // font-weight: bold;
+      }
+    }
+  }
+  &[data-status='paused'] {
+    .podcard__control {
+      &-play {
+        opacity: 1;
+      }
+      &-pause {
+        opacity: 0;
+      }
+    }
+  }
+  &[data-status='playing'] {
+    .podcard__control {
+      &-play {
+        opacity: 0;
+      }
+      &-pause {
+        opacity: 1;
+      }
+    }
+  }
+
+
+
+  .episode-info {
+    width: auto;
+    position: relative;
+    padding-left: 5.6%;
+
+    &__label {
+      font-family: 'Guardian Agate Sans', georgia;
+      font-weight: 700;
+      font-size: 0;
+      color: #666;
+      margin-bottom: 1px;
+      line-height: 16px;
+      &--latest {
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: middle;
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 1px;
+          height: 12px;
+          background-color: #ccc;
+          height: 14px;
+          vertical-align: middle;
+          margin: 0 7px 0 9px;
+        }
+      }
+      &--time,
+      &--current {
+        padding-top: 1px;
+        font-size: 13px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &--current {
+        max-width: 0;
+        transition: all 300ms;
+        opacity: 0.6;
+        white-space: nowrap;
+        overflow: hidden;
+        &:after {
+          content: 'of';
+          margin: 0 4px 0 3px;
+        }
+      }
+    }
+    &__title {
+      padding-top: 1px;
+      font-family: 'Guardian Egyptian Headline';
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 21px;
+      color: #333;
+    }
+  }
+  &[data-status='playing'] {
+    .episode-info {
+      &__label {
+        &--current {
+          max-width: 50px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+}
+
+
+@keyframes pause-puslate {
+  0% {
+    transform: scale(0.95);
+  }
+
+  75% {
+    transform: scale(0.95);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  83% {
+    transform: scale(0.9);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  98% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+
+@font-face {
+    font-family: 'Guardian Agate Sans';
+    src: url('https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian Ag Sans 1 Web-Bold.eot');
+    src: url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Ag+Sans+1+Web-Bold.eot?#iefix) format('embedded-opentype'), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Ag+Sans+1+Web-Bold.woff) format('woff'), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Ag+Sans+1+Web-Bold.ttf) format('truetype'), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Ag+Sans+1+Web-Bold.svg#Guardian+Text+Egyp+Web-Medium) format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: "Guardian Egyptian Headline";
+    src: url('https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian Egyp Web-Bold.eot');
+    src: url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.eot?#iefix) format('embedded-opentype'), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.woff) format('woff'), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.ttf) format('truetype'), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.svg#Guardian+Egyp+Web-Bold) format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal
+}
