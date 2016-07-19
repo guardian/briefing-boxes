@@ -1,0 +1,311 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+@import 'shared/_imports';
+$width:112px;
+
+
+.story-timeline{
+  color: #333;
+
+  &--title{
+    width: $width;
+    border-top:1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
+    font-family: $f-sans-serif-headline;
+    font-size: 13px;
+    font-weight: 800;
+    padding-top: 6px;
+    padding-bottom: 12px;
+    color: #005689;
+
+    &.first{
+      opacity: 0.4;
+      height: 15px;
+      padding-top: 6px;
+      padding-bottom: 12px;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      display: block;
+      border-top: 0px;
+      color: #797979;
+    }
+
+    &.last{
+      color: #797979;
+    }
+  }
+
+  &--wrapper{
+    font-family: $f-sans-serif-headline;
+    width: $width;
+  }
+
+  &--container{
+    overflow: hidden;
+    height: 250px;
+  }
+
+  &--list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 1px dotted #005689;
+    margin-left: 6px;
+    padding-left: 10px;
+    position: relative;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+
+    a{
+      text-decoration: none;
+      color: inherit;
+
+      &:first-of-type{
+        li{
+          margin-top: 6px;
+        }
+      }
+
+      &:last-child{
+        li{
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    &.last{
+      padding-top: 6px;
+      opacity: 0.5;
+    }
+  }
+
+  &--item{
+    font-size: 15px;
+    margin-bottom: 16px;
+    color: #005689;
+
+    &.unpublished{
+      opacity: 50%;
+      color: #989898;
+
+      .story-timeline--kicker{
+        color: #989898;
+      }
+
+    }
+  }
+
+  &--kicker{
+    color: #333;
+  }
+
+  &--circle{
+    width: 10px;
+    height: 10px;
+    background-color: #005689;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+
+    &.unpublished{
+      width: 9px;
+      height:9px;
+      border: 1px solid #005689;
+      background-color: white;
+    }
+  }
+}
+
+.right-button, .left-button{
+  border-radius: 50%;
+  border: 1px solid #005689;
+  height: 15px;
+  width: 15px;
+  padding-top: 3px;
+  padding-left: 3px;
+  float: right;
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+
+  svg{
+    width: 12px;
+    height: 12px;
+  }
+}
+
+
+// .story-timeline{
+//   width: 800px;
+//   float: left;
+//   margin: 0px;
+//   padding: 0px;
+//   border-left: 1px solid #ececec;
+//   border-right: 1px solid #ececec;
+//
+//   a{
+//     text-decoration: none !important;
+//   }
+//
+//   @include mq($until: wide){
+//     width: 520px;
+//   }
+//
+//   @include mq($until: mobileLandscape){
+//     width:375px;
+//   }
+//
+//
+//   h1{
+//     font-size: 18px;
+//     font-family: $f-serif-headline;
+//     margin: 0px;
+//     padding: 0px;
+//     font-weight: 500;
+//     color: #333;
+//
+//     &.last-title{
+//       color: #ececec;
+//     }
+//   }
+//
+//   h2{
+//     margin: 0px;
+//     margin-top: 12px;
+//     padding: 0px;
+//     font-size: 12px;
+//     font-family: $f-sans-serif-text;
+//     background-color: #005689;
+//     padding: 8px;
+//     width: auto;
+//     display: inline-block;
+//     border-radius: 16px;
+//     color: white;
+//
+//     &.last-label{
+//       background-color: #ececec;
+//     }
+//   }
+//
+//   &--title{
+//     width: 100%;
+//     color: #005689;
+//     margin-bottom: 16px;
+//
+//     @include mq($until: wide){
+//       margin-left: 122px;
+//     }
+//
+//     @include mq($until: leftCol){
+//       margin-left:0px;
+//     }
+//
+//     &::before{
+//       width: 80px;
+//       content: '';
+//       display: block;
+//       height: 1px;
+//       background-color: #005689;
+//       margin-bottom: 3px;
+//     }
+//
+//     h1{
+//       font-size: 18px;
+//       font-family: $f-serif-headline;
+//       margin: 0px;
+//       padding: 0px;
+//       font-weight: 900;
+//     }
+//   }
+//
+//   &--list{
+//     width: 800px;
+//     white-space: nowrap;
+//     overflow-y: hidden;
+//     overflow-x: scroll;
+//     -webkit-overflow-scrolling: touch;
+//     margin: 0px;
+//     padding: 0px;
+//
+//     @include mq($until: wide){
+//       width: 520px;
+//     }
+//
+//     @include mq($until: mobileLandscape){
+//       width:375px;
+//     }
+//
+//       &::-webkit-scrollbar {
+//           display: none;
+//       }
+//     li{
+//       width: calc(200px - 13px);
+//       display: inline-block;
+//       list-style: none;
+//       margin: 0px;
+//       padding: 6px 6px 12px 6px;
+//       white-space: normal;
+//       transform: translate(0px, 0px);
+//       border-left: 1px solid #ececec;
+//       -webkit-transition: all 0.5s ease-in-out;
+//       -moz-transition: all 0.5s ease-in-out;
+//       -o-transition: all 0.5s ease-in-out;
+//       transition: all 0.5s ease-in-out;
+//
+//       &::after{
+//         display: block;
+//         content: '';
+//         width: 110%;
+//         height: 1px;
+//         border-bottom: 1px dotted #005689;
+//         margin-top: -14px;
+//       }
+//     }
+//   }
+// }
+//
+// .left-button, .right-button{
+//   border-radius: 50%;
+//   border: 1px solid #005689;
+//   height: 24px;
+//   width: 25px;
+//   padding-top: 6px;
+//   padding-left: 5px;
+//   margin-top: 26px;
+//
+//   @include mq($until: mobileLandscape){
+//     display:none;
+//   }
+// }
+//
+// .left-button{
+//   float: left;
+//   margin-right: 10px;
+//
+//   @include mq($until: wide){
+//     margin-left: 122px;
+//   }
+//
+//   @include mq($until: leftCol){
+//     margin-left:0px;
+//   }
+// }
+//
+// .right-button{
+//   float: left;
+//   margin-left: 10px;
+// }
