@@ -65,7 +65,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: dir,
-                    src: ['**/source.json', '**/embed.html', '**/hashed/*.js'],
+                    src: ['**/source.json', '**/embed.html', '**/boot.js', '**/hashed/*.js'],
                     dest: dir,
                 }]
             },
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: dir,
-                    src: ['**/source.json', '**/embed.html'],
+                    src: ['**/source.json', '**/boot.js', '**/embed.html'],
                     dest: dir
                 }]
             }
