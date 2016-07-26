@@ -36,7 +36,7 @@ To run locally, use
 grunt local --folderName=the-name-of-your-embed
 ```
 
-To run remotely, you'll need to add AWS Keys. Use [`aws-keys.example.json`](aws-keys.example.json) to create an `aws-keys.json` file and replace the default values with your key values from the `gu-aws-interactive` AWS Account. From then on use
+To run remotely, you'll need access to Interactives Prod via Janus. With Janus credentials, run
 ```
 grunt remote --folderName=the-name-of-your-embed
 ```
@@ -52,4 +52,4 @@ grunt paths --folderName=the-name-of-your-embed
 
 ##Embedding your embed
 
-All you need for this is the S3path, paste it into composer and press the embed button. 
+All you need for this is the S3path, paste it into composer and press the embed button.

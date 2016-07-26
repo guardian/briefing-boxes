@@ -1,0 +1,8 @@
+{
+  "html": "<div class=\"video-docs__wrapper\"><style>html{margin:0}#bg{position:fixed;top:-50%;left:-50%;width:200%;height:200%}#bg img{position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;min-width:50%;min-height:50%}.video__docs--headline{top:50%;width:90%;position:absolute;font-size:90px;line-height:30px;font-family:'Guardian Egyptian Web';font-weight:800;color:#fff}</style><div class=\"video__docs--wrapper\">\n  <div id=\"bg\">\n    <div class=\"video__docs--background\"><img src=\"https://interactive.guim.co.uk/embed/article-embeds/video-docs/hashed/background.487936e6.jpg\"/></div>\n  </div>\n  <div class=\"video__docs--headline\">Katrina Ten years on</div>\n</div>\n</div>",
+  "previous": "",
+  "refreshStatus": true,
+  "url": "https://www.theguardian.com/cities/video/2015/aug/20/ten-years-after-hurricane-katrina-new-orleans-recover-video",
+  "headline": "Katrina Ten years on",
+  "trailText": "Latest news, sport and comment from the Guardian"
+}
