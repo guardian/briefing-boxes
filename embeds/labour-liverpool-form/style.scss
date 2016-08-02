@@ -1,0 +1,138 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+@import 'shared/_imports';
+input{
+  border: none !important;
+}
+.fsRow{
+  margin-bottom: 0px !important;
+}
+
+.fsRow::before{
+  content: '';
+  display: block;
+  width: 99.9%;
+  height: 1px;
+  background-color: white;
+  margin-right: -8px;
+  float: right;
+}
+
+.fsBody{
+  padding: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.fsRowBody{
+  padding: 8px !important;
+  margin-bottom: 0px !important;
+  color: white;
+}
+.fsSupporting{
+  color: white !important;
+  margin-top: 4px !important;
+  color: rgba(255,255,255,0.5) !important;
+}
+
+.fsFieldFocused{
+  background-color: transparent !important;
+}
+
+.fsForm{
+  width: 100% !important;
+  border: none !important;
+  font-family:'Guardian Text Sans Web' !important;
+  background-color: #005689 !important;
+  border-radius:0px !important;
+}
+
+.fsField{
+  background-image: none !important;
+  border: none !important;
+  border-radius:15px !important;
+  outline: none;
+  stroke:none;
+  font-family:'Guardian Text Sans Web' !important;
+  font-weight: 300 !important;
+  font-size: 15px !important;
+  color: #333;
+}
+
+.fsSubmit{
+  background-color: none;
+}
+
+.fsSectionHeader{
+  display: none !important;
+}
+
+.field-auto-capture__message{
+  padding: 0px !important;
+  background-color: transparent !important;
+}
+
+.fsLabel{
+  color: white !important;
+  font-size: 15px!important;
+  font-weight: 200 !important;
+  margin-bottom: 2px !important;
+  font-family: inherit !important;
+}
+
+.fsOptionLabel{
+  width: auto !important;
+  border-radius: 15px !important;
+  background-image: none !important;
+  border: none !important;
+  float: left;
+}
+
+.field-auto-capture{
+  padding: 0px !important;
+}
+
+.fsSubmit{
+  background-color: transparent !important;
+  margin: 0px !important;
+  padding: 8px !important;
+}
+
+.fsPagination{
+  margin: 0px !important;
+}
+
+.fsSubmitButton{
+  background-color:#00b0ce !important;
+  border-radius: 20px !important;
+  width: 100%;
+  font-family:'Guardian Text Sans Web' !important;
+  color: white !important;
+  text-align: left !important;
+  padding: 10px !important;
+}
+
+.fsSubmitButton::after{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
+#label43054931{
+  font-size: 18px !important;
+  line-height: 20px !important;
+}
+
+.fsNextButton{
+  background-color:#00b0ce !important;
+}

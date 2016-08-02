@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
     require('jit-grunt')(grunt);
 
-    var aws = grunt.file.readJSON('aws-keys.json');
     var newDir = grunt.option('folderName');
     var dir =  'embeds/' + (grunt.option('folderName') ? grunt.option('folderName') : '');
     var scss = 'embeds/' + (grunt.option('folderName') ? grunt.option('folderName') + '/*.scss' : '**/*.scss');
@@ -65,7 +64,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: dir,
-                    src: ['**/source.json', '**/embed.html', '**/hashed/*.js'],
+                    src: ['**/source.json', '**/embed.html', '**/boot.js', '**/hashed/*.js'],
                     dest: dir,
                 }]
             },
@@ -79,7 +78,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: dir,
-                    src: ['**/source.json', '**/embed.html'],
+                    src: ['**/source.json', '**/boot.js', '**/embed.html'],
                     dest: dir
                 }]
             }
@@ -101,8 +100,7 @@ module.exports = function(grunt) {
         },
         aws_s3: {
             options: {
-                accessKeyId: aws.AWSAccessKeyID,
-                secretAccessKey: aws.AWSSecretKey,
+                awsProfile: 'interactivesProd',
                 region: 'us-east-1'
             },
             production: {
