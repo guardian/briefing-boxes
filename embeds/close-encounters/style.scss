@@ -27,12 +27,12 @@ body {
     height: 100%;
   }
   .wrapper {
-    padding-left: 55px;
+    // padding-left: 55px;
     padding-right: 63px;
-    padding-top: 56px;
-    @media (min-width: 380px) and (max-width: 380px) {
-      float: right;
-    }
+    padding-top: 60px;
+    // @media (min-width: 380px) and (max-width: 380px) {
+    //   float: right;
+    // }
   }
   a {
     color: inherit;
@@ -44,7 +44,9 @@ body {
 
 // Podcard styles
 #podcard-player {
-  width: 300px; // the whole thing scales based on this attribute
+  width: 102%; // the whole thing scales based on this attribute
+  max-width: 320px;
+  min-width: 235px;
   position: relative;
 
   #podcard-audio {
@@ -95,9 +97,9 @@ body {
       }
     }
     &__artwork {
-      width: 364px;
-      height: 355px;
-      top: -55px;
+      width: 121.33%;
+      height: 118.33%;
+      top: -18.33%;
       left: 0;
       bottom: 0;
       right: 0;
@@ -113,6 +115,8 @@ body {
     &__progress-bar {
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
       z-index: 11;
       transform: rotate(-119deg);
 
@@ -128,12 +132,22 @@ body {
       font-family: 'Guardian Egyptian Headline';
       font-weight: 600;
       color: #F7E4D5;
-      width: 36%;
+      width: 26%;
       font-size: 20px;
       line-height: 19.5px;
-      transform: translateY(-50%);
+      transform: translateY(-50px);
       padding: 10%;
       margin-top: 3px;
+      text-shadow:
+       -1px -1px 0 rgba(57,57,57, 0.5),
+        1px -1px 0 rgba(57,57,57, 0.5),
+        -1px 1px 0 rgba(57,57,57, 0.5),
+         1px 1px 0 rgba(57,57,57, 0.5);
+      @media screen and (max-width: 340px) {
+        left: auto;
+        right: 59%;
+
+      }
     }
     &__subscribe {
       z-index: 20;
