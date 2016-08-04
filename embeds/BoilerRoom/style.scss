@@ -1,0 +1,36 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+@import 'shared/_imports';
+
+.boiler-room{
+  &__wrapper{
+    width: 100%;
+  }
+
+  &__text{
+    font-family: $f-sans-serif-text;
+    font-size: 12px;
+    font-weight: 800;
+    border-top: 1px solid #767676;
+    color: #767676;
+    padding-top: 4px;
+    padding-bottom: 10px;
+  }
+
+  &__logo{
+    img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
