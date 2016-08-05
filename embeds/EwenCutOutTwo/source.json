@@ -1,0 +1,8 @@
+{
+  "html": "<div class=\"EwenCutOutTwo__wrapper\"><style>.ewen-cutout__background{width:100%;height:300px;position:relative;overflow:hidden}@media all and (max-width:18.8125em){.ewen-cutout__background{height:291px}}@media all and (max-width:18.5em){.ewen-cutout__background{height:292px}}.ewen-cutout__cutout-top{border-bottom:5px solid #4bc6df;height:286px;overflow:hidden}.ewen-cutout__cutout-top img{width:70%;height:auto;display:block}</style><script src=\"https://interactive.guim.co.uk/libs/iframe-messenger/iframeMessenger.js\"></script>\n<script>\n    iframeMessenger.enableAutoResize();\n</script>\n<div class=\"ewen-cutout__background\">\n  <div class=\"ewen-cutout__cutout-top\">\n    <img src=\"https://interactive.guim.co.uk/embed/article-embeds/EwenCutOutTwo/hashed/ewen_white.a4a2d4c6.png\">\n  </div>\n</div>\n</div>",
+  "previous": "",
+  "refreshStatus": true,
+  "url": "http://www.theguardian.com/membership/ng-interactive/2016/jun/16/guardian-labour-liverpool-ewen-macaskill",
+  "headline": "Labour and Liverpool",
+  "trailText": "Follow a Guardian journalist as they dig into a topic off the beaten news track, track their working out as they go, and contribute ideas, suggestions and feedback. With weekly updates, we hope to keep interested readers updated but not inundated on the issues they care about, and give them the chance to collaborate in our reporting."
+}
