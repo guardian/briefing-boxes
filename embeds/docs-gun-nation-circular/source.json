@@ -1,0 +1,8 @@
+{
+  "html": "<div class=\"docs-gun-nation-circular__wrapper\"><style>#docs-circular .overlay-link{display:none}</style><div id='docs-circular'>\n\n  <div class='image'>\n    <img>\n  </div>\n\n  <div class='furniture'>\n    <div class='furniture__icon'>\n    </div>\n    <div class='furniture__logo'>\n    </div>\n    <div class='furniture__headline'>\n      <span class='text'>Watch the new documentary  film from the Guardian</span>\n      <span class='arrow'>\n        <svg width=\"22px\" height=\"22px\" viewBox=\"219 353 22 22\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n            <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->\n            <desc>Created with Sketch.</desc>\n            <defs></defs>\n            <g id=\"Bullet\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" transform=\"translate(219.000000, 353.000000)\">\n                <circle id=\"Oval-2\" fill=\"#D62110\" cx=\"11\" cy=\"11\" r=\"11\"></circle>\n                <polygon id=\"arrow\" fill=\"#F6F6F6\" points=\"11.4041096 5 17.1164384 10.7260274 17.1164384 11.2739726 11.4041096 17 10.869863 16.4657534 14.9794521 11.5479452 4.5 11.5479452 4.5 10.4520548 14.9794521 10.4520548 10.869863 5.53424658\"></polygon>\n            </g>\n        </svg>\n      </span>\n    </div>\n  </div>\n\n  <a href='#' class='overlay-link'></a>\n</div>\n</div>",
+  "previous": "",
+  "refreshStatus": true,
+  "url": "https://www.theguardian.com",
+  "headline": "The Guardian",
+  "trailText": "Latest news, sport and comment from the Guardian"
+}

@@ -1,0 +1,46 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+@import 'shared/_imports';
+
+
+#docs-circular {
+  .image {
+    img {
+
+    }
+  }
+  .furniture {
+    &__icon,
+    &__logo {
+      svg {
+
+      }
+    }
+    &__icon {
+
+    }
+    &__logo {
+
+    }
+    &__headline {
+      .text {
+
+      }
+      .arrow {
+
+      }
+    }
+  }
+  .overlay-link {
+    display: none;
+  }
+}
