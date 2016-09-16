@@ -1,0 +1,67 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+@import 'shared/_imports';
+
+.labour{
+  &__quote--background{
+    width: 100%;
+    height: 600px;
+    background-image: url('@@assetPath@@/louise_Ellman_03.jpg');
+    background-size: 153%;
+    background-position: center;
+    background-position-x: 0px;
+    position: relative;
+    background-repeat: no-repeat;
+
+    @include mq($until: tablet){
+      height: 259px;
+      background-size: 130%;
+    }
+  }
+  &__quote{
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+
+    @include mq($until: tablet) {
+      bottom:0px;
+      left: 0px;
+      background-color: rgba(0,0,0,0.6);
+      padding: 6px 6px 12px 6px;
+    }
+
+    svg{
+      width: 50px;
+
+      @include mq($until: tablet) {
+        width: 35px;
+      }
+      
+      path{
+        fill:white;
+      }
+    }
+    h1{
+      font-family: $f-serif-headline;
+      font-weight: 200;
+      width: 340px;
+      color: white;
+      margin: 0px;
+      font-size: 28px;
+
+      @include mq($until: tablet) {
+        width: 100%;
+        font-size: 20px;
+      }
+    }
+  }
+}

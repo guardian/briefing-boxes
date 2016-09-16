@@ -17,6 +17,8 @@ $.getJSON("https://interactive.guim.co.uk/docsdata-test/11aao6b2cD9twEd4FSRPncmP
 	var moveAmount = 0;
 	var moveAmountUp = 0;
 	var totalHeight = 0;
+	var publishedCount = 0;
+	var scrollTo = 0;
 	console.log('up', canClickUp);
 
 	//get the height of each of the items in the list
@@ -28,20 +30,29 @@ $.getJSON("https://interactive.guim.co.uk/docsdata-test/11aao6b2cD9twEd4FSRPncmP
 				moveAmount = listItem[0].scrollHeight + 16;
 				//array of heights of each of the items used to calculate the amount which needs to be moved
 				itemHeights.push(itemHeight);
+				//checks how many have a link and therefor are published
+				if(json.sheets.Sheet1[i].Link.indexOf("www.") >= 0){
+					publishedCount ++;
+				};
+				console.log("published", publishedCount);
+				if(publishedCount >= 6){
+					$('.story-timeline--container').animate({scrollTop:$(document).height()});
+					$('.story-timeline--title.first').css('display', 'block').delay(100).animate({opacity:'1'});
+					canClickUp = true;
+					moveAmount = $(document).height();
+				}
 		}
 	});
 
+
   $(downButton).click(function(){
     if(canClickDown != false){
-      // $(list).not('.last').css('transform', 'translateY('+'-'+ moveAmount + 'px' +')');
 			$('.story-timeline--container').animate({scrollTop:moveAmount});
 			$(list).not('.last').scrollTop()
       clickCount++;
 			moveAmount = moveAmount + itemHeights[clickCount-1] + 16;
       canClickUp = true;
-			$('.story-timeline--title.first').css('display', 'block').delay(100).animate({opacity:'1'});/*.css('height', '25px').css('opacity', '1')/*.css('padding-top', '6px').css('padding-bottom', '12px')*/;
-			console.log('down', canClickDown);
-			console.log('up', canClickUp);
+			$('.story-timeline--title.first').css('display', 'block').delay(100).animate({opacity:'1'});
     }
   });
   $(leftButton).click(function(){
@@ -49,11 +60,10 @@ $.getJSON("https://interactive.guim.co.uk/docsdata-test/11aao6b2cD9twEd4FSRPncmP
 			itemHeightsBack = itemHeights.reverse();
 			moveAmount = listItem[0].scrollHeight + 16;
 			$('.story-timeline--container').animate({scrollTop:-moveAmountUp});
-      clickCount--;
+      clickCount = 0;
       canClickDown = true;
 			moveAmountUp = moveAmountUp + itemHeights[clickCount-1] + 16;
-			console.log('moveup', moveAmountUp);
-			console.log(clickCount);
+			moveAmount = listItem[0].scrollHeight + 16;
     }
   });
 });

@@ -20,7 +20,7 @@ $light-blue:#4bc6df;
     height: 218px;
     overflow: hidden;
 
-    @include mq($until: 296px) {
+    @include mq($until: 321px) {
       height: 385px;
     }
   }
@@ -44,7 +44,7 @@ $light-blue:#4bc6df;
       width: 390px;
     }
 
-    @include mq($until: 296px) {
+    @include mq($until: 321px) {
       position: relative;
       width: 320px;
     }

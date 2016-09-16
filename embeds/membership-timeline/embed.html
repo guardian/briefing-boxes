@@ -1,7 +1,479 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><style>.story-timeline{color:#333}.story-timeline--title{width:112px;border-top:1px solid #E3E3E3;border-bottom:1px solid #E3E3E3;font-family:"Guardian Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size:13px;font-weight:800;padding-top:6px;padding-bottom:12px;color:#005689}.story-timeline--title.main{font-family:"Guardian Egyptian Web",Georgia,serif;font-size:20px}.story-timeline--title.first{opacity:.4;height:15px;padding-top:6px;padding-bottom:12px;-webkit-transition:all .5s ease-in-out;transition:all .5s ease-in-out;display:block;border-top:0;color:#797979}.story-timeline--title.last{color:#797979}.story-timeline--wrapper{font-family:"Guardian Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;width:112px}.story-timeline--container{overflow:hidden;height:250px}.story-timeline--list{list-style:none;padding:0 0 0 10px;margin:0 0 0 6px;border-left:1px dotted #005689;position:relative;-webkit-transition:all .5s ease-in-out;transition:all .5s ease-in-out}.story-timeline--list a{text-decoration:none;color:inherit}.story-timeline--list a:first-of-type li{margin-top:6px}.story-timeline--list a:last-child li{margin-bottom:0}.story-timeline--list.last{padding-top:6px;opacity:.5;font-weight:800}.story-timeline--item{font-size:15px;margin-bottom:16px;color:#005689}.story-timeline--item.unpublished{opacity:50%;color:#989898}.story-timeline--item.unpublished .story-timeline--kicker{color:#989898}.story-timeline--kicker{color:#333;font-weight:600}.story-timeline--divide{color:#E3E3E3}.story-timeline--circle{width:10px;height:10px;background-color:#005689;display:block;border-radius:50%;position:absolute;left:-5px}.story-timeline--circle.unpublished{width:9px;height:9px;border:1px solid #005689;background-color:#fff}.left-button,.right-button{border-radius:50%;border:1px solid #005689;height:15px;width:15px;padding-top:3px;padding-left:3px;float:right;-webkit-transform:rotate(90deg);transform:rotate(90deg)}.left-button svg,.right-button svg{width:12px;height:12px}</style></head><body><link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/gdn-cdn/embed/webwewant/www-gu-type.css">
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>/**
+ * An example of a colour palette to be used with guss-colours
+ *
+ * If you're looking for the guardian colour palette: https://github.com/guardian/pasteup-palette
+ * 
+ * @type Map
+ *
+ * @group colours
+ */
+/**
+ * Get a colour from a given colour palette.
+ * 
+ * @param {String} $name                    - colour to get
+ * @param {Map}    $palette ($guss-colours) - palette
+ *
+ * @requires {variable} guss-colours
+ *
+ * @return {Color | Null}
+ *
+ * @group colours
+ */
+/**
+ * Generate helper classes for a given colour palette  
+ * Outputs rules such as: `.c-red { color: red; }`.
+ *
+ * @param {Map}    $palette  ($guss-colours) - palette
+ * @param {String} $prefix   ("c-")          - prefix
+ * @param {String} $property ("color")       - property
+ *
+ * @requires {variable} guss-colours
+ *
+ * @group colours
+ */
+/**
+ * Data font stack
+ *
+ * @group typography
+ */
+/**
+ * Serif font stack
+ *
+ * @group typography
+ */
+/**
+ * Headline font stack
+ *
+ * @group typography
+ */
+/**
+ * Sans serif text font stack
+ *
+ * @group typography
+ */
+/**
+ * Sans serif headline font stack
+ *
+ * @group typography
+ */
+/**
+ * Default font scale settings
+ * See font-scale.html and font-scale.png for visual representations
+ *
+ * @group typography
+ */
+/**
+ * Grab all levels of a font the font-scale
+ *
+ * @param {String} $name - Name of the font-scale matrix (eg: headline)
+ * @param {Map} $font-scale ($font-scale)
+ *
+ * @example
+ *  font-size: get-scale(header);
+ *
+ * @requires {variable} $font-scale
+ *
+ * @return {Map}
+ *
+ * @group typography
+ */
+/**
+ * Grab info for a particular level of a font-scale
+ *
+ * @param {String} $name - Name of the font-scale in the matrix (eg: headline)
+ * @param {Number} $level - Level in the matrix
+ * @param {Map} $font-scale ($font-scale)
+ *
+ * @example
+ *  font-size: get-scale-level(header, 1);
+ *
+ * @requires {variable} $font-scale
+ * @requires {function} get-scale
+ *
+ * @return {Map}
+ *
+ * @group typography
+ */
+/**
+ * Get a font-size for a level in the font-scale matrix
+ *
+ * @param {String} $name - Name of the font-scale in the matrix (eg: headline)
+ * @param {Number} $level - Level in the matrix
+ * @param {Map} $font-scale - Configuration
+ *
+ * @example
+ *  font-size: get-font-size(header, 3);
+ *
+ * @requires {variable} $font-scale
+ * @requires {function} convert-to-px
+ * @requires {function} get-scale-level
+ *
+ * @return {Number}
+ *
+ * @group typography
+ */
+/**
+ * Get a line-height for a level in the font-scale matrix
+ *
+ * @param {String} $name - Name of the font-scale in the matrix (eg: headline)
+ * @param {Number} $level - Level in the matrix
+ * @param {Map} $font-scale - Configuration
+ *
+ * @example
+ *  font-size: get-line-height(header, 3);
+ *
+ * @requires {variable} $font-scale
+ * @requires {function} convert-to-px
+ * @requires {function} get-scale-level
+ *
+ * @return {Number}
+ *
+ * @group typography
+ */
+/**
+ * Turn any value into pixels
+ *
+ * @param {Number} $value
+ *
+ * @example
+ *  font-size: convert-to-px(14); // 14px
+ *
+ * @return {Number}
+ *
+ * @group typography
+ */
+/**
+ * Default typography settings, to be included as soon as possible in the HTML
+ * 1. Make type rendering look crisper
+ * 2. Set relative line spacing to 1.5 (16px * 1.5 = 24px)
+ *
+ * @param {String} $font-family ($f-serif-text) - Default global font
+ *
+ * @requires {variable} $f-serif-text
+ *
+ * @group typography
+ */
+/**
+ * Font-size and line-height shorthand
+ *
+ * @param {Number} $size
+ * @param {Number} $line-height ($size)
+ *
+ * @example
+ *  @include font-size(18, 24);
+ *
+ * @requires {function} convert-to-px
+ *
+ * @group typography
+ */
+/**
+ * Font styling shorthand  
+ * Note: prefer the usage of the font-scale mixins to stick to the font scale
+ *
+ * @param {String} $family
+ * @param {String} $weight
+ * @param {Number} $size
+ * @param {Number} $line-height ($size)
+ *
+ * @example
+ *  @include font(arial, bold, 18, 24);
+ *
+ * @requires {mixin} font-size
+ *
+ * @group typography
+ */
+/**
+ * Header family and weight properties.
+ *
+ * @requires {variable} $f-serif-headline
+ *
+ * @group typography
+ */
+/**
+ * Header typography settings.
+ *
+ * @param {Number} $level
+ * @param {Boolean} $size-only
+ *
+ * @example
+ *  // Output all properties (font-size, line-height, family, weight)
+ *  @include fs-header(3);
+ *  
+ *  // Output font-size and line-height only
+ *  @include fs-header(3, $size-only: true);
+ *
+ * @requires {function} get-font-size
+ * @requires {function} get-line-height
+ * @requires {mixin} font-size
+ * @requires {mixin} f-header
+ *
+ * @group typography
+ */
+/**
+ * Healdine family and weight properties.
+ *
+ * @requires {variable} $f-serif-headline
+ *
+ * @group typography
+ */
+/**
+ * Headline typography settings.
+ *
+ * @param {Number} $level
+ * @param {Boolean} $size-only
+ *
+ * @example
+ *  // Output all properties (font-size, line-height, family, weight)
+ *  @include fs-headline(3);
+ *  
+ *  // Output font-size and line-height only
+ *  @include fs-headline(3, $size-only: true);
+ *
+ * @requires {function} get-font-size
+ * @requires {function} get-line-height
+ * @requires {mixin} font-size
+ * @requires {mixin} f-headline
+ *
+ * @group typography
+ */
+/**
+ * Body Heading family and weight properties.
+ *
+ * @requires {variable} $f-serif-text
+ *
+ * @group typography
+ */
+/**
+ * Body Heading typography settings.
+ *
+ * @param {Number} $level
+ * @param {Boolean} $size-only
+ *
+ * @example
+ *  // Output all properties (font-size, line-height, family, weight)
+ *  @include fs-bodyHeading(3);
+ *  
+ *  // Output font-size and line-height only
+ *  @include fs-bodyHeading(3, $size-only: true);
+ *
+ * @requires {function} get-font-size
+ * @requires {function} get-line-height
+ * @requires {mixin} font-size
+ * @requires {mixin} f-bodyHeading
+ *
+ * @group typography
+ */
+/**
+ * Body Copy family property.
+ *
+ * @requires {variable} $f-serif-text
+ *
+ * @group typography
+ */
+/**
+ * Body Copy typography settings.
+ *
+ * @param {Number} $level
+ * @param {Boolean} $size-only
+ *
+ * @example
+ *  // Output all properties (font-size, line-height, family)
+ *  @include fs-bodyCopy(3);
+ *  
+ *  // Output font-size and line-height only
+ *  @include fs-bodyCopy(3, $size-only: true);
+ *
+ * @requires {function} get-font-size
+ * @requires {function} get-line-height
+ * @requires {mixin} font-size
+ * @requires {mixin} f-bodyCopy
+ *
+ * @group typography
+ */
+/**
+ * Data family property.
+ *
+ * @requires {variable} $f-data
+ *
+ * @group typography
+ */
+/**
+ * Data typography settings.
+ *
+ * @param {Number} $level
+ * @param {Boolean} $size-only
+ *
+ * @example
+ *  // Output all properties (font-size, line-height, family)
+ *  @include fs-data(3);
+ *  
+ *  // Output font-size and line-height only
+ *  @include fs-data(3, $size-only: true);
+ *
+ * @requires {function} get-font-size
+ * @requires {function} get-line-height
+ * @requires {mixin} font-size
+ * @requires {mixin} f-data
+ *
+ * @group typography
+ */
+/**
+ * Text Sans family property.
+ *
+ * @requires {variable} $f-sans-serif-text
+ *
+ * @group typography
+ */
+/**
+ * Text Sans typography settings.
+ *
+ * @param {Number} $level
+ * @param {Boolean} $size-only
+ *
+ * @example
+ *  // Output all properties (font-size, line-height, family)
+ *  @include fs-textSans(3);
+ *  
+ *  // Output font-size and line-height only
+ *  @include fs-textSans(3, $size-only: true);
+ *
+ * @requires {function} get-font-size
+ * @requires {function} get-line-height
+ * @requires {mixin} font-size
+ * @requires {mixin} f-textSans
+ *
+ * @group typography
+ */
+/**
+ * Headline Sans family property.  
+ * Is not currently integrated into our font scale matrix,
+ * hence no `fs-` mixin; currently we're just using it as a
+ * replacement font in a few places.
+ *
+ * @requires {variable} $f-sans-serif-headline
+ *
+ * @group typography
+ */
+/**
+ * Default colour palette
+ *
+ * @type Map
+ *
+ * @group colours
+ */
+.story-timeline {
+  color: #333; }
+  .story-timeline--title {
+    width: 112px;
+    border-top: 1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
+    font-family: "Guardian Sans Web", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    padding-top: 6px;
+    padding-bottom: 12px;
+    color: #005689; }
+    .story-timeline--title.main {
+      font-family: "Guardian Egyptian Web", Georgia, serif;
+      font-size: 20px; }
+    .story-timeline--title.first {
+      opacity: 0.4;
+      height: 15px;
+      padding-top: 6px;
+      padding-bottom: 12px;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      display: block;
+      border-top: 0px;
+      color: #797979; }
+    .story-timeline--title.last {
+      color: #797979; }
+  .story-timeline--wrapper {
+    font-family: "Guardian Sans Web", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    width: 112px; }
+  .story-timeline--container {
+    overflow: hidden;
+    height: 250px; }
+    .story-timeline--container ul > li:last-child {
+      margin-bottom: 0px; }
+  .story-timeline--list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 1px dotted #005689;
+    margin-left: 6px;
+    padding-left: 10px;
+    position: relative;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    .story-timeline--list a {
+      text-decoration: none;
+      color: inherit; }
+      .story-timeline--list a:first-of-type li {
+        margin-top: 6px; }
+      .story-timeline--list a:last-child li {
+        margin-bottom: 0px; }
+    .story-timeline--list.last {
+      padding-top: 6px;
+      opacity: 0.5;
+      font-weight: 800; }
+  .story-timeline--item {
+    font-size: 15px;
+    margin-bottom: 16px;
+    color: #005689; }
+    .story-timeline--item.unpublished {
+      opacity: 50%;
+      color: #989898; }
+      .story-timeline--item.unpublished .story-timeline--kicker {
+        color: #989898; }
+  .story-timeline--kicker {
+    color: #333;
+    font-weight: 600; }
+  .story-timeline--divide {
+    color: #E3E3E3; }
+  .story-timeline--circle {
+    width: 10px;
+    height: 10px;
+    background-color: #005689;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px; }
+    .story-timeline--circle.unpublished {
+      width: 9px;
+      height: 9px;
+      border: 1px solid #005689;
+      background-color: white; }
+
+.right-button, .left-button {
+  border-radius: 50%;
+  border: 1px solid #005689;
+  height: 15px;
+  width: 15px;
+  padding-top: 3px;
+  padding-left: 3px;
+  float: right;
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+  cursor: pointer; }
+  .right-button:hover, .left-button:hover {
+    background-color: #005689; }
+    .right-button:hover svg polygon, .left-button:hover svg polygon {
+      fill: white; }
+  .right-button svg, .left-button svg {
+    width: 12px;
+    height: 12px; }
+</style></head><body><link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/gdn-cdn/embed/webwewant/www-gu-type.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script src="https://localhost:8000/embeds/membership-timeline/hashed/handlebars.a19c3307.js"></script>
-<script src="https://localhost:8000/embeds/membership-timeline/hashed/main.87f5e4a4.js"></script>
+<script src="@@assetPath@@/handlebars.a19c3307.js"></script>
+<script src="@@assetPath@@/main.7251d57a.js"></script>
 <script src="https://interactive.guim.co.uk/libs/iframe-messenger/iframeMessenger.js"></script>
 <script>
     iframeMessenger.enableAutoResize();

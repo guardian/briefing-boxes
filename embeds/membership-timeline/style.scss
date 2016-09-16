@@ -59,6 +59,12 @@ $width:112px;
   &--container{
     overflow: hidden;
     height: 250px;
+
+    ul > li {
+      &:last-child{
+        margin-bottom: 0px;
+      }
+    }
   }
 
   &--list{
@@ -110,7 +116,6 @@ $width:112px;
       .story-timeline--kicker{
         color: #989898;
       }
-
     }
   }
 
@@ -152,6 +157,17 @@ $width:112px;
   -ms-transform: rotate(90deg); /* IE 9 */
   -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
   transform: rotate(90deg);
+  cursor: pointer;
+
+  &:hover{
+    background-color: #005689;
+
+    svg{
+      polygon{
+        fill: white;
+      }
+    }
+  }
 
   svg{
     width: 12px;
