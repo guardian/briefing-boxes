@@ -15,11 +15,18 @@ $mq-breakpoints: (
 #docs-circular {
   position: relative;
   height: 350px;
+  width: 280px;
+  @media (max-width: 380px) and (min-width: 380px) {
+    float: right;
+  }
+  @media (max-width: 300px) and (min-width: 300px) {
+    float: right;
+  }
   .image {
     width: 280px;
     height: 280px;
     border-radius: 100%;
-    background-color: #ccc;
+    background-color: #fafafa;
     overflow: hidden;
     img {
       width: 100%;
@@ -45,9 +52,16 @@ $mq-breakpoints: (
       height: 56px;
     }
     &__logo {
+      background-color: rgba(255,255,255,0.2);
       margin-top: 9px;
       width: 145px;
       height: 55px;
+      position: relative;
+      top: 2px;
+      svg {
+        position: relative;
+        bottom: 2px;
+      }
     }
     &__headline {
       margin-top: 10px;
@@ -69,7 +83,6 @@ $mq-breakpoints: (
   }
   .overlay-link {
     display: block;
-    display: none;
     position: absolute;
     top: 0;
     left: 0;

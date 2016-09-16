@@ -1,5 +1,4 @@
-r(function(){
-
+setTimeout(function() {
   console.log('this is mained');
 
   var $coverImgAll = document.querySelectorAll('#docs-circular .image img');
@@ -10,9 +9,8 @@ r(function(){
   $coverImg.setAttribute('srcset', $coverImg.getAttribute('data-srcset'));
   $coverImg.classList.add('selected');
 
-  var $link = document.querySelector('#docs-4by3-card');
+  var $link = document.querySelector('#circle-overlay-link');
   var n = $link.getAttribute('data-link-name') + ' : ' + $coverImg.getAttribute('alt');
   $link.setAttribute('data-link-name', n);
-
-});
-function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
+  
+}, 100);
