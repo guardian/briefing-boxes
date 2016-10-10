@@ -1,0 +1,137 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+@import 'shared/_imports';
+
+@mixin wrapperWidths(){
+  @include mq($until: wide) {
+    width:1140px;
+  }
+  @include mq($until: leftCol) {
+    width:980px;
+  }
+  @include mq($until: desktop) {
+    width:740px;
+  }
+  @include mq($until: tablet) {
+    width:100%;
+  }
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  font-smooth: auto;
+  font-smooth: never;
+  font-smooth: always;
+}
+
+h1{
+  margin: 0px;
+  padding: 0px;
+  font-family: $f-serif-headline;
+  font-weight: 800;
+  color: white;
+  font-size: 60px;
+
+  @include mq($until: tablet) {
+    font-size: 42px;
+  }
+
+  @include mq($until: mobileLandscape) {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    font-size: 38px;
+    width: 240px;
+    line-height: 30px;
+  }
+}
+
+h2{
+  margin: 0px;
+  padding: 0px;
+  font-family: $f-serif-headline;
+  font-weight: 800;
+  color: white;
+  margin-left: 132px;
+  @include mq($until: desktop) {
+    margin-left: 0px;
+  }
+
+  @include mq($until: mobileLandscape) {
+    font-size: 18px;
+    width: 217px;
+    margin: 123px 0 0 0;
+  }
+}
+
+p{
+  font-family: $f-serif-headline;
+  color: white;
+  width: 400px;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: .3px;
+
+  @include mq($until: tablet) {
+    display: none;
+  }
+
+  &:nth-child(3){
+    margin-top: 110px;
+  }
+
+  a{
+    color: inherit;
+  }
+}
+
+.wrapper{
+  width: 1300px;
+  min-height: 420px;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  @include wrapperWidths();
+}
+
+.america__war {
+  background-image: url('@@assetPath@@/immersive_top_BIGGER.png');
+  background-size: cover;
+  background-position:bottom right;
+  min-height: 420px;
+  height: 100vh;
+}
+
+.america__war--type {
+  position: absolute;
+  left: 44%;
+  bottom: 0px;
+  transform: translate(-50%, -2%);
+  width: 47%;
+  text-align: left;
+
+  @include mq($until: leftCol) {
+    left: 33%;
+    width: 62%;
+  }
+
+  @include mq($until: tablet) {
+    position: absolute;
+    left: 48%;
+    top: 74%;
+    transform: translate(-50%,-50%);
+    width: 86%;
+    text-align: left;
+  }
+}

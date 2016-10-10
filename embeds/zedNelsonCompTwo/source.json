@@ -1,0 +1,8 @@
+{
+  "html": "<div class=\"zedNelsonCompTwo__wrapper\"><style>.image_one,.image_two{float:left;width:49%}.image_one img,.image_two img{width:100%;height:auto;display:block}.image_one{margin-right:1%}@media all and (max-width:46.24em){.image_one,.image_two{float:none;width:100%}.image_one{margin:0}}</style><script src=\"https://interactive.guim.co.uk/libs/iframe-messenger/iframeMessenger.js\"></script>\n<script>\n    iframeMessenger.enableAutoResize();\n</script>\n<div class=\"zed_wrapper\">\n  <div class=\"image_one\">\n    <img src=\"https://interactive.guim.co.uk/embed/article-embeds/zedNelsonCompTwo/hashed/01.aea1a0bb.jpg\">\n  </div>\n  <div class=\"image_two\">\n    <img src=\"https://interactive.guim.co.uk/embed/article-embeds/zedNelsonCompTwo/hashed/02.fb830f4d.jpg\">\n  </div>\n</div>\n</div>",
+  "previous": "",
+  "refreshStatus": true,
+  "url": "https://www.theguardian.com",
+  "headline": "The Guardian",
+  "trailText": "Latest news, sport and comment from the Guardian"
+}
