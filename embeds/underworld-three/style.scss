@@ -1,0 +1,130 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+@import 'shared/_imports';
+
+html {
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden; }
+
+body {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+  
+.wrapper {
+  background: #fff;
+  width:300px;
+  height: 420px;
+  text-align: center;
+
+  .rings {
+    margin: 0 auto;
+   
+    #logo{
+      position: absolute;
+      margin-top: 20px;
+      left: 10px;
+      border-radius: 50%;
+      
+      #light-ray {
+        -webkit-animation:rotate 8s ease infinite;
+        -moz-animation:rotate 8s ease infinite;
+        animation:rotate 8s ease infinite;
+        transform-origin: 351px 391px;
+      }
+    }
+
+  
+  }
+
+.main-copy {
+  width: 280px;
+  position: absolute;
+  margin: 0 10px;
+  top: 270px;
+  text-align: left;
+    h2{
+      font-size: 21px;
+      line-height: 23px;
+      color: #333333;
+      font-family: 'Guardian Egyptian Headline';
+
+      span {
+        color: #E87100;
+      }
+    }
+}
+
+.cta {
+  font-family: 'Guardian Agate Sans';
+  font-size: 14px;
+  color: #E87100;
+  background: #fff;
+  display: inline-block;
+  float: left;
+  border-radius: 20px;
+  position: absolute;
+  top:390px;
+  left: 10px;
+  height: 30px;
+  padding: 0 15px;
+  border: solid 1px #E87100;
+
+
+  p {
+    margin-top: 8px;
+  }
+}
+
+.cta:hover {
+  background: #E87100;
+  color: #333;
+  cursor: pointer;
+}
+
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  20% {
+    transform: rotate(40deg); }
+  30% {
+    transform: rotate(-40deg); }
+  35% {
+    transform: rotate(-40deg); }
+  55% {
+    transform: rotate(60deg); } 
+  70% {
+    transform: rotate(0deg); } 
+  80% {
+    transform: rotate(0deg); } }
+
+@font-face {
+  font-family: 'Guardian Agate Sans';
+  src: url("https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian Ag Sans 1 Web-Bold.eot");
+  src: url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Ag+Sans+1+Web-Bold.eot?#iefix) format("embedded-opentype"), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Ag+Sans+1+Web-Bold.woff) format("woff"), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Ag+Sans+1+Web-Bold.ttf) format("truetype"), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Ag+Sans+1+Web-Bold.svg#Guardian+Text+Egyp+Web-Medium) format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "Guardian Egyptian Headline";
+  src: url("https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian Egyp Web-Bold.eot");
+  src: url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.eot?#iefix) format("embedded-opentype"), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.woff) format("woff"), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.ttf) format("truetype"), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.svg#Guardian+Egyp+Web-Bold) format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal; }
+
+/*# sourceMappingURL=styles.css.map */
