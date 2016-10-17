@@ -10,3 +10,112 @@ $mq-breakpoints: (
 );
 
 @import 'shared/_imports';
+
+
+.wrapper {
+  .inner {
+    margin-left: 0;
+    /* @media (min-width: 301px) and (max-width: 380px) { */
+    @media (max-width: 380px) {
+      margin-left: auto;
+    }
+  }
+  }
+
+#docs-4by3-card {
+  text-decoration: none;
+  display: block;
+  width: 220px;
+  border-top: 2px solid #fb0;
+  background-color: #ECECEC;
+  .cover {
+    width: 100%;
+    padding-bottom: 133.3%;
+    position: relative;
+    &__img,
+    &__overlay,
+    &__caption {
+      position: absolute;
+    }
+    &__img {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 220px;
+      img {
+        max-width: 100%;
+        &.selected {
+          display: block;
+        }
+      }
+    }
+    &__overlay {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 140px;
+      background: -moz-linear-gradient(top, rgba(51,51,51,0) 0%, rgba(51,51,51,0.4) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(51,51,51,0) 0%,rgba(51,51,51,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(51,51,51,0) 0%,rgba(51,51,51,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00333333', endColorstr='#66333333',GradientType=0 ); /* IE6-9 */    }
+    &__caption {
+      left: 8px;
+      right: 8px;
+      bottom: 1px;
+    }
+    &__video {
+      // optical alignment
+      margin-left: -1px;
+      margin-bottom: 3px;
+    }
+    &__name {
+      margin-left: -1px;
+      white-space: nowrap;
+      display: block;
+      font-size: 42px;
+      font-weight: 500;
+      font-family: "Guardian Egyptian Headline", Georgia, serif;
+      color: #111;
+    }
+  }
+  .link {
+    padding: 4px 9px;
+    font-family: "Guardian Egyptian Headline", Georgia, serif;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 21px;
+    .description {
+      color: #333;
+    }
+    .watch {
+      color: #767676;
+    }
+    &__arrow {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      bottom: 1px;
+    }
+  }
+}
+
+
+@font-face {
+    font-family: "Guardian Egyptian Headline";
+    src: url('https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian Egyp Web-Bold.eot');
+    src: url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.eot?#iefix) format('embedded-opentype'), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.woff) format('woff'), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.ttf) format('truetype'), url(https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Bold.svg#Guardian+Egyp+Web-Bold) format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal
+}
+
+@font-face{
+	font-family:"Guardian Egyptian Headline";
+	src:url('https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian Egyp Web-Medium.eot');
+	src:url('https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Medium.eot?#iefix') format('embedded-opentype'),
+		url('https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Medium.woff') format('woff'),
+		url('https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Medium.ttf') format('truetype'),
+		url('https://s3.amazonaws.com/gdn-cdn/fonts/ascii/Guardian+Egyp+Web-Medium.svg#Guardian+Egyp+Web-Medium') format('svg');
+	font-weight:500;font-style:normal;font-stretch:normal;
+}
