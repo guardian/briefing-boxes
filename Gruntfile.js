@@ -188,7 +188,7 @@ module.exports = function(grunt) {
             }
 
             project['html'] = '<div class="' + localDir + '__wrapper">' + '<style>' + css + '</style>' + html + '</div>';
-            var embedHtml = documentBody + html + '</body></html>';
+            var embedHtml = documentBody + html + '<script src="//j.ophan.co.uk/interactive.js"></script></body></html>';
             grunt.file.expand({}, dir + '/_source/*').forEach(function(file) {
                 file = file.split("/");
                 file = file[file.length-1];
