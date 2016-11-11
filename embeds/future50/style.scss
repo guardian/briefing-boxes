@@ -1,0 +1,339 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+@import 'shared/_imports';
+
+$pink: rgb(253, 238, 241);
+$blue: rgb(204, 221, 231);
+
+h1{
+  font-family:$f-serif-headline;
+  color: #005689;
+  font-size: 20px;
+}
+
+.future-fifty{
+    background-color: $pink;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+
+    &.blue{
+      background-color: $blue;
+    }
+}
+
+.future-fifty--standfirst-wrapper{
+    position: fixed;
+    top: 88%;
+    left: 50%;
+    width: 90%;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    display: none;
+
+    @include mq($from: desktop){
+      width: 980px;
+      display: block;
+    }
+
+    @include mq($from: leftCol) {
+      width: 1140px;
+    }
+
+    @include mq($from: wide) {
+      width: 1300px;
+    }
+}
+
+.future-fifty-standfirst{
+  width: 300px;
+  margin-left: 30px;
+}
+
+.future-fifty--type{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+
+    @include mq($from: desktop){
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background-size: cover;
+      width: 980px;
+      margin-top: 0px;
+    }
+
+    @include mq($from: leftCol) {
+      width: 1140px;
+    }
+
+    @include mq($from: wide) {
+      width: 1300px;
+      -ms-transform: translateX(-50%) translateY(-56%);
+      -moz-transform: translateX(-50%) translateY(-56%);
+      -webkit-transform: translateX(-50%) translateY(-56%);
+    }
+
+  svg{
+      width: 100%;
+      height: auto;
+
+      @include mq($from: desktop) {
+        width: 500px;
+        height: auto;
+        margin-top: -50px;
+      }
+
+      @include mq($from: leftCol) {
+        width: 550px;
+        height: auto;
+      }
+
+      @include mq($from: wide) {
+        width: 570px;
+        height: auto;
+      }
+  }
+}
+
+.future-fifty--cut{
+  position: absolute;
+  bottom: -10px;
+  display: none;
+
+  img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &.one{
+    right: 30px;
+    display: block;
+    width: 116px;
+    opacity: 0;
+
+    @include mq($from: desktop) {
+      width: 225px;
+      right: 400px;
+      bottom: -150px;
+    }
+
+    @include mq($from: leftCol) {
+      right: 500px;
+    }
+
+    @include mq($from: wide) {
+      right: 730px;
+    }
+  }
+
+  &.two{
+    opacity: 0;
+    @include mq($from:desktop) {
+      display: block;
+      width: 225px;
+      right: 80px;
+      z-index: -10;
+    }
+
+    @include mq($from: leftCol) {
+      right: 220px;
+    }
+
+    @include mq($from: wide) {
+      right: 420px;
+    }
+  }
+}
+
+// .setone{
+//   display: none;
+// }
+
+.settwo{
+  .future-fifty--cut{
+    &.one{
+      width: 200px;
+      bottom: -120px;
+
+
+      @include mq($from:desktop) {
+        width: 328px;
+        bottom: -136px;
+        right: 340px;
+      }
+
+      @include mq($from: leftCol) {
+        right: 440px;
+      }
+
+      @include mq($from:wide) {
+        right: 626px;
+      }
+    }
+    &.two{
+      bottom: -40px;
+    }
+  }
+}
+
+@keyframes oneIn {
+  0%{
+    margin-right: -50px;
+    opacity: 0;
+  }
+  15%{
+    opacity: 1;
+  }
+  20%{
+    margin-right: 0px;
+    opacity: 1;
+  }
+  80%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  85%{
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(-50px);
+    opacity:0;
+  }
+}
+
+@keyframes twoIn {
+  0%{
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  15%{
+    opacity: 1;
+  }
+  20%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  80%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  85%{
+    opacity:0;
+  }
+  100%{
+    transform: translateX(50px);
+    opacity:0;
+  }
+}
+
+// .future-fifty--images{
+//   opacity: 0;
+//   -webkit-transition: all 1s ease-in-out;
+//   -moz-transition: all 1s ease-in-out;
+//   -o-transition: all 1s ease-in-out;
+//   transition: all 1s ease-in-out;
+// }
+//
+.future-fifty--images.active {
+  // opacity: 1;
+  &.setone{
+    .future-fifty--cut{
+      &.one{
+        animation: twoIn;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        -webkit-animation: twoIn;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+      }
+
+      &.two{
+        animation: twoIn;
+        animation-delay: 0.5s;
+        animation-duration: 3.5s;
+        animation-fill-mode: forwards;
+        -webkit-animation: twoIn;
+        -webkit-animation-delay: 1s;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  &.settwo{
+    .future-fifty--cut{
+      &.one{
+        animation: oneIn;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        -webkit-animation: oneIn;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+      }
+
+      &.two{
+        animation: oneIn;
+        animation-delay: 0.5s;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        -webkit-animation: oneIn;
+        -webkit-animation-delay: 1s;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+.spotify-button {
+  border: 1px solid #005689;
+  padding: 12px;
+  border-radius: 24px;
+  font-family:$f-sans-serif-headline;
+  width: 122px;
+  color: #005689;
+  display: none;
+
+  &:hover{
+    background-color: #005689;
+    color: white;
+  }
+}
