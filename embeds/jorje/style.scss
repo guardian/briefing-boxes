@@ -25,6 +25,7 @@ body{
     overflow: hidden;
     @include mq($from: desktop){
       margin-top: 94px;
+      overflow: visible;
     }
   }
 
