@@ -11,8 +11,8 @@ $mq-breakpoints: (
 
 @import 'shared/_imports';
 
-$pink: rgb(253, 238, 241);
-$blue: rgb(204, 221, 231);
+$pink: rgb(220, 42, 125);
+$blue: rgb(183, 33, 102);
 
 h1{
   font-family:$f-serif-headline;
@@ -24,8 +24,9 @@ a {
   text-decoration: none !important;
 }
 
-.future-fifty{
-    background-color: $pink;
+.year-in{
+    background-color: #fdeef1;
+    background: linear-gradient(30deg, #fdadba, rgb(220, 42, 125));
     position: fixed;
     top: 50%;
     left: 50%;
@@ -43,13 +44,9 @@ a {
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
-
-    &.blue{
-      background-color: $blue;
-    }
 }
 
-.future-fifty--standfirst-wrapper{
+.year-in--standfirst-wrapper{
     position: fixed;
     top: 88%;
     left: 50%;
@@ -74,19 +71,19 @@ a {
 
 }
 
-.future-fifty-standfirst{
+.year-in-standfirst{
   width: 300px;
   margin-left: 30px;
 }
 
-.future-fifty--type{
+.year-in--type{
     position: absolute;
     top: 100px;
     width: 100%;
 
     @include mq($from: desktop){
       position: fixed;
-      top: 50%;
+      top: 40%;
       left: 50%;
       width: auto;
       height: auto;
@@ -113,26 +110,31 @@ a {
   svg{
       width: 100%;
       height: auto;
+      opacity: 0.8;
+
+      path {
+        fill:rgba(255,255,255,0.5);
+      }
 
       @include mq($from: desktop) {
-        width: 500px;
+        width: 600px;
         height: auto;
         margin-top: -50px;
       }
 
       @include mq($from: leftCol) {
-        width: 550px;
+        width: 650px;
         height: auto;
       }
 
       @include mq($from: wide) {
-        width: 570px;
+        width: 670px;
         height: auto;
       }
   }
 }
 
-.future-fifty--cut{
+.year-in--cut{
   position: absolute;
   bottom: -10px;
   display: none;
@@ -146,13 +148,12 @@ a {
   &.one{
     right: 30px;
     display: block;
-    width: 116px;
+    width: 180px;
     opacity: 0;
 
     @include mq($from: desktop) {
-      width: 225px;
+      width: 335px;
       right: 400px;
-      bottom: -150px;
     }
 
     @include mq($from: leftCol) {
@@ -188,7 +189,7 @@ a {
 // }
 
 .settwo{
-  .future-fifty--cut{
+  .year-in--cut{
     &.one{
       width: 200px;
       bottom: -120px;
@@ -264,7 +265,7 @@ a {
   }
 }
 
-// .future-fifty--images{
+// .year-in--images{
 //   opacity: 0;
 //   -webkit-transition: all 1s ease-in-out;
 //   -moz-transition: all 1s ease-in-out;
@@ -272,10 +273,10 @@ a {
 //   transition: all 1s ease-in-out;
 // }
 //
-.future-fifty--images.active {
+.year-in--images.active {
   // opacity: 1;
   &.setone{
-    .future-fifty--cut{
+    .year-in--cut{
       &.one{
         animation: twoIn;
         animation-duration: 3s;
@@ -299,7 +300,7 @@ a {
   }
 
   &.settwo{
-    .future-fifty--cut{
+    .year-in--cut{
       &.one{
         animation: oneIn;
         animation-duration: 3s;
