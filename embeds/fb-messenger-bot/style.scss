@@ -1,0 +1,132 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+@import 'shared/_imports';
+
+$pink: rgb(149, 28, 85);
+$blue: rgb(204, 221, 231);
+$gs-baseline: 12px;
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.fbmessenger {
+
+  &--cta__button {
+    font-family: $f-sans-serif-text;
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+    border: thin solid #46bcdf;
+    background-color: transparent;
+    border-radius: 36px;
+    height: 36px;
+    line-height: 38px;
+    display: block;
+    width: 100px;
+    color: #005689;
+    padding-left: 16px;
+    padding-right: 8px;
+    top: 80px;
+    z-index: 20;
+
+    @include mq($from: tablet) {
+      top: 64px;
+    }
+
+  }
+
+      &--arrow__icon {
+      height: auto;
+      width: auto;
+      float: right;
+      padding-top: 3px;
+      fill: #005689;
+    }
+
+  &--wrapper {
+    position: relative;
+    @include mq($from: desktop){
+      margin-top: 0px;
+    }
+
+    &:hover {
+      .cta__button {
+           color: inherit;
+
+           svg {
+             fill: inherit;
+           }
+         }
+      }
+  }
+
+  &--wrapper, &--colour {
+    width: 100%;
+    height: 300px;
+  }
+
+  &--colour {
+    border-top: 2px solid #46bcdf;
+    z-index: 10;
+  }
+
+  &--type, &--image, &--colour {
+    position: absolute;
+  }
+
+  &--type {
+    margin-top: 6px;
+
+    h1 {
+      font-family:$f-serif-headline;
+      color: #46bcdf;
+      font-size: 24px;
+      margin: 0px;
+      @include mq($from: tablet) {
+        font-size: 28px;
+      }
+    }
+
+    p {
+      font-family: $f-sans-serif-text;
+      color: #005689;
+      font-size: 16px;
+      margin: 0px;
+      padding-top: 6px;
+    }
+
+    @include mq($from: desktop){
+      left: 10px;
+    }
+  }
+
+  &--image {
+    width: 113px;
+    height: 77px;
+    right: 6px;
+    top: 56px;
+
+    @include mq($from: mobileLandscape){
+      width: 128px;
+      height: 86px;
+      top: 6px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}
