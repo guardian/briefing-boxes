@@ -117,18 +117,18 @@ a {
       }
 
       @include mq($from: desktop) {
-        width: 600px;
+        width: 800px;
         height: auto;
         margin-top: -50px;
       }
 
       @include mq($from: leftCol) {
-        width: 650px;
+        width: 850px;
         height: auto;
       }
 
       @include mq($from: wide) {
-        width: 670px;
+        width: 870px;
         height: auto;
       }
   }
@@ -152,16 +152,8 @@ a {
     opacity: 0;
 
     @include mq($from: desktop) {
+      right: 12%;
       width: 335px;
-      right: 400px;
-    }
-
-    @include mq($from: leftCol) {
-      right: 500px;
-    }
-
-    @include mq($from: wide) {
-      right: 730px;
     }
   }
 
@@ -191,22 +183,13 @@ a {
 .settwo{
   .year-in--cut{
     &.one{
-      width: 200px;
+      width: 300px;
       bottom: -120px;
 
-
       @include mq($from:desktop) {
-        width: 328px;
+        width: 480px;
         bottom: -136px;
-        right: 340px;
-      }
-
-      @include mq($from: leftCol) {
-        right: 440px;
-      }
-
-      @include mq($from:wide) {
-        right: 626px;
+        right: 12%;
       }
     }
     &.two{
