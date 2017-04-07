@@ -1,0 +1,47 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+@import 'shared/_imports';
+
+html, body, * {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+h2,
+p {
+    color: #005689;
+}
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.0625rem;
+    font-family: "Guardian Egyptian Web","Guardian Text Egyptian Web",Georgia,serif;
+    font-weight: 900;
+}
+p {
+    font-family: "Guardian Text Sans Web",Georgia,serif;
+    font-size: 16px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.fruits {
+    font-size: 0;
+    img {
+        width: 174px;
+        max-width: 50%;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
