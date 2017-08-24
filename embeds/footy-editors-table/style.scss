@@ -1,0 +1,126 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+$gs-gutter: 12px;
+
+@import 'shared/_imports';
+
+body {
+  font-family: "Guardian Text Sans Web",Georgia,serif;
+  font-size: 14px;
+}
+
+div.table-title {
+  display: block;
+  margin-bottom: 0px;
+  max-width: 640px;
+  padding-top:6px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #333333;
+   font-size: 18px;
+   font-family: "Guardian Egyptian Web","Guardian Text Egyptian Web",Georgia,serif;
+   font-weight: 900;
+   border-top: #dddddd 1px dotted;
+   padding-top: 6px;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: #f6f6f6;
+  border-collapse: collapse;
+  height: 280px;
+  margin-top: 0px;
+  max-width: 640px;
+  width: 100%;
+}
+
+th {
+  color:#D5DDE5;
+  background:#333333;
+  font-size:14px;
+  padding-top: 6px;
+  padding-left: 12px;
+  padding-bottom: 12px;
+  text-align:left
+}
+
+
+th:last-child {
+  border-right:none;
+  width: 20px;
+  padding-right: 10px;
+  text-align: right;
+}
+th:first-child {
+  width: 20px;
+}
+
+tr {
+  color:#666B85;
+  font-size:14px;
+}
+
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+  background:#EAEAEA;
+}
+
+td {
+  background:#f6f6f6;
+  padding-top: 6px;
+  padding-left: 12px;
+  padding-bottom: 16px;
+  text-align:left;
+  font-size:14px;
+}
+
+.team-name {
+  left: 84px;
+  position: absolute;
+  display: inline-block;
+}
+
+svg {
+  width: 16px;
+  height: 8px;
+}
+
+
+img {
+        max-height: 22px;
+        max-width: 22px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center top;
+        vertical-align: top;
+        margin-right: 12px;
+      }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  .team-name {
+  text-decoration:underline;
+  }
+}
