@@ -1,0 +1,32 @@
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+<!-- <script src="@@assetPath@@/jquery_spotify_add_playlist.js" type="text/javascript"></script> -->
+<link rel="stylesheet" type="text/css" href="https://interactive.guim.co.uk/embed/webwewant/www-gu-type.css">
+<h1 class="player-title">Where would you like to listen?</h1>
+<div class="guardian__music-players">
+    <div class="guardian__music-player spotify">
+        <h1>Listen on Spotify </h1> <svg width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><circle stroke="#005689" stroke-width="2" cx="26" cy="26" r="26"/><path fill="#005689" d="M24.73 27.27l.45 10.378h1.614l.477-10.377 10.378-.476V25.18l-10.377-.45-.476-10.378H25.18l-.45 10.377-10.378.45v1.614"/></g></svg>
+        <span>
+            <a target="_parent" href="https://open.spotify.com/user/guardianmusic/playlist/3QIDFY1OamMFHrnLyGUm04"><img src="@@assetPath@@/spotify.svg"></a>
+        </span>
+        <iframe src="https://open.spotify.com/embed/user/guardianmusic/playlist/3QIDFY1OamMFHrnLyGUm04" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+    <div class="guardian__music-player apple">
+        <h1>Listen on Apple Music</h1> <svg width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><circle stroke="#005689" stroke-width="2" cx="26" cy="26" r="26"/><path fill="#005689" d="M24.73 27.27l.45 10.378h1.614l.477-10.377 10.378-.476V25.18l-10.377-.45-.476-10.378H25.18l-.45 10.377-10.378.45v1.614"/></g></svg>
+        <span>
+            <a href="https://itunes.apple.com/gb/playlist/the-months-best-music-november-2017/idpl.u-KVXBkA6TZRxk1VN"><img src="@@assetPath@@/apple-music.svg"></a>
+        </span>
+        <iframe src="https://tools.applemusic.com/embed/v1/playlist/pl.u-KVXBkA6TZRxk1VN?country=gb" height="100%" width="100%" frameborder="0"></iframe>
+    </div>
+    <div class="guardian__music-player amazon">
+        <h1>Listen on Amazon Music</h1><svg width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><circle stroke="#005689" stroke-width="2" cx="26" cy="26" r="26"/><path fill="#005689" d="M24.73 27.27l.45 10.378h1.614l.477-10.377 10.378-.476V25.18l-10.377-.45-.476-10.378H25.18l-.45 10.377-10.378.45v1.614"/></g></svg>
+        <span>
+            <a target="_parent" href="https://music.amazon.co.uk/user-playlists/07f7aed60c824da3968c2e11a2f3b45cengb?ref=dm_sh_aa60-d5ee-dmcp-6fb2-64d84"><img src="@@assetPath@@/Amazon.png"></a>
+        </span>
+        <iframe id='AmazonMusicEmbed07f7aed60c824da3968c2e11a2f3b45cengb' src='https://music.amazon.co.uk/embed/07f7aed60c824da3968c2e11a2f3b45cengb/?id=k28bqRyWnV&marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB' width='100%' height='550px' style='border:1px solid rgba(0, 0, 0, 0.12);max-width:'></iframe>
+    </div>
+</div>
+<script src="@@assetPath@@/main.js" type="text/javascript"></script>
+<script src="https://interactive.guim.co.uk/libs/iframe-messenger/iframeMessenger.js"></script>
+<script>
+    iframeMessenger.enableAutoResize();
+</script>

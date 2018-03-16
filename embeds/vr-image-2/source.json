@@ -1,0 +1,8 @@
+{
+  "html": "<div class=\"vr-image-2__wrapper\"><style></style><script src=\"//storage.googleapis.com/vrview/2.0/build/vrview.min.js\"></script>\n\n<div id=\"vrview\"></div>\n\n<script>\n  window.addEventListener('load', onVrViewLoad)\n  function onVrViewLoad() {\n    var vrView = new VRView.Player('#vrview', {\n      width: '100%',\n      height: 300,\n      preview: '@@assetPath@@/R0010097.98a22c7e.jpg',\n      image: '@@assetPath@@/R0010097.98a22c7e.jpg',\n      is_stereo: false,\n      is_yaw_only : true,\n    });\n  }\n</script>\n\n<script src=\"https://interactive.guim.co.uk/libs/iframe-messenger/iframeMessenger.js\"></script>\n<script>\n    iframeMessenger.enableAutoResize();\n</script>\n</div>",
+  "previous": "",
+  "refreshStatus": true,
+  "url": "https://www.theguardian.com",
+  "headline": "The Guardian",
+  "trailText": "Latest news, sport and comment from the Guardian"
+}

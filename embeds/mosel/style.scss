@@ -1,0 +1,48 @@
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+@import 'shared/_imports';
+
+.fullscreen-video {
+    background-image: url('https://media.guim.co.uk/c144ee32b89af152078a6b072af88d7e641ae42f/0_0_4000_2667/2000.jpg');
+    background-size: cover;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-position: center;
+
+    video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background: url('https://media.guim.co.uk/c144ee32b89af152078a6b072af88d7e641ae42f/0_0_4000_2667/2000.jpg') no-repeat;
+      background-size: cover;
+
+      @include mq($until: tablet){
+        display: none;
+      }
+    }
+}
