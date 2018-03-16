@@ -43,13 +43,17 @@ grunt remote --folderName=the-name-of-your-embed
 
 To compile and deploy *everything* run the above commands without the `--folderName` option. **WARNING: This should be done with caution, as it might take a while to compile all Embeds**
 
-##Getting the paths
+## Getting the paths
 
 To put your Embed in an article you will need a url. This url is S3url which is generated when you run the remote command. You can also retrieve this by running:
 ```
 grunt paths --folderName=the-name-of-your-embed
 ```
 
-##Embedding your embed
+## Embedding your embed
 
 All you need for this is the S3path, paste it into composer and press the embed button.
+
+## Top tips
+
+* Make sure any links from your embed include `target="_top"`, so the linked page opens in the whole window, rather than inside the iframe
