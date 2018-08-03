@@ -1,8 +1,0 @@
-{
-  "html": "<div class=\"zedNelson__wrapper\"><style>.zedNelson,.zedNelson--two{height:100vh;background-position:center center;background-size:cover;background-repeat:no-repeat}.zedWrapper{position:relative}.zedNelson{background-image:url(https://interactive.guim.co.uk/embed/article-embeds/zedNelson/hashed/zed1.4ee29070.jpg);-webkit-animation-name:animate;animation-name:animate;-webkit-animation-delay:1s;animation-delay:1s;-webkit-animation-duration:8s;animation-duration:8s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.zedNelson--two{background-image:url(https://interactive.guim.co.uk/embed/article-embeds/zedNelson/hashed/zed2.1902f389.jpg);-webkit-animation-name:animate2;animation-name:animate2;-webkit-animation-delay:1.5s;animation-delay:1.5s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-duration:8s;animation-duration:8s;opacity:0;position:absolute;top:0;width:100%}@-webkit-keyframes animate{0%,100%{opacity:1}50%{opacity:0}}@keyframes animate{0%,100%{opacity:1}50%{opacity:0}}@-webkit-keyframes animate2{0%,100%{opacity:0}50%{opacity:1}}@keyframes animate2{0%,100%{opacity:0}50%{opacity:1}}</style><div class=\"zedWrapper\">\n  <div class=\"zedNelson\"></div>\n  <div class=\"zedNelson--two\"></div>\n</div>\n</div>",
-  "previous": "",
-  "refreshStatus": true,
-  "url": "https://www.theguardian.com",
-  "headline": "The Guardian",
-  "trailText": "Latest news, sport and comment from the Guardian"
-}

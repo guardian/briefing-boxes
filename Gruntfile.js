@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     var scss = 'embeds/' + (grunt.option('folderName') ? grunt.option('folderName') + '/*.scss' : '**/*.scss');
     var html = 'embeds/' + (grunt.option('folderName') ? grunt.option('folderName') + '/*.html' : '**/*.html');
     var source = 'embeds/' + (grunt.option('folderName') ? grunt.option('folderName')+ '/_source/*' : '**/source/*');
-    var remoteDir = 'embed/article-embeds/' + (grunt.option('folderName') ? grunt.option('folderName') : '');
+    var remoteDir = 'embed/briefing-boxes/' + (grunt.option('folderName') ? grunt.option('folderName') : '');
 
     grunt.initConfig({
         watch: {
@@ -163,10 +163,16 @@ module.exports = function(grunt) {
                             default: 'The Guardian'
                         },
                         {
-                            config: 'snap.trailText',
+                            config: 'snap.imageURL',
                             type: 'input',
-                            message: 'Trail Text',
-                            default: 'Latest news, sport and comment from the Guardian'
+                            message: 'Image url',
+                            default: ''
+                        },
+                        {
+                            config: 'snap.description',
+                            type: 'input',
+                            message: 'Content',
+                            default: 'This is the box content'
                         }
                     ]
                 }
@@ -176,11 +182,19 @@ module.exports = function(grunt) {
 
     grunt.registerTask('compile', function() {
         grunt.file.expand({}, dir + '*').forEach(function(path) {
-            var html = grunt.file.read(path + '/index.html');
-            var css = grunt.file.read(path + '/style.css');
             var jsonFile = path + '/source.json';
-            var localDir = path.split('/')[1];
             var project = grunt.file.readJSON(jsonFile);
+            var htmlheader = '<div class="sidebar"><div class="sidecar-center"><h1>';
+            var headline = project.headline;
+            var htmlheaderend = '</h1>'
+            var imageStart = '<div class="sidebar-image"><img src="';
+            var image = project.imageURL;
+            var imageEnd = '"></div>';
+            var descriptionStart = '<p>';
+            var description = project.description;
+            var descriptionEnd = '</p></div></div>';
+            var css = grunt.file.read(path + '/style.css');
+            var localDir = path.split('/')[1];
             var embed = path + '/embed.html';
             var documentBody = '<!DOCTYPE html><html><head><meta charset="UTF-8"><style>' + css + '</style></head><body>';
             if (grunt.file.exists(path + '/hashmap.json')) {
@@ -188,7 +202,11 @@ module.exports = function(grunt) {
             }
 
             project['html'] = '<div class="' + localDir + '__wrapper">' + '<style>' + css + '</style>' + html + '</div>';
-            var embedHtml = documentBody + html + '<script src="//j.ophan.co.uk/interactive.js"></script></body></html>';
+            if(project.imageURL){
+                var embedHtml = documentBody + htmlheader + headline + htmlheaderend + imageStart + image + imageEnd + descriptionStart + description + descriptionEnd + '<script src="//j.ophan.co.uk/interactive.js"></script><script src="https://interactive.guim.co.uk/libs/iframe-messenger/iframeMessenger.js"></script><script>iframeMessenger.enableAutoResize();</script></body></html>';
+            } else {
+                var embedHtml = documentBody + htmlheader + headline + htmlheaderend + descriptionStart + description + descriptionEnd + '<script src="//j.ophan.co.uk/interactive.js"></script><script src="https://interactive.guim.co.uk/libs/iframe-messenger/iframeMessenger.js"></script><script>iframeMessenger.enableAutoResize();</script></body></html>';
+            }
             grunt.file.expand({}, dir + '/_source/*').forEach(function(file) {
                 file = file.split("/");
                 file = file[file.length-1];

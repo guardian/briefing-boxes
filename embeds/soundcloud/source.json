@@ -1,8 +1,0 @@
-{
-  "html": "<div class=\"soundcloud__wrapper\"><style></style><script src=\"https://connect.soundcloud.com/sdk/sdk-3.1.2.js\"></script>\n<script src=\"https://localhost:8000/embeds/soundcloud/hashed/main.7cb61a32.js\"></script>\n</div>",
-  "previous": "",
-  "refreshStatus": true,
-  "url": "https://www.theguardian.com",
-  "headline": "The Guardian",
-  "trailText": "Latest news, sport and comment from the Guardian"
-}

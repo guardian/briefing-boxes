@@ -1,8 +1,0 @@
-{
-  "html": "<div class=\"BoilerRoom__wrapper\"><style>.boiler-room__wrapper{width:100%}.boiler-room__text{font-family:\"Guardian Text Sans Web\",\"Helvetica Neue\",Helvetica,Arial,\"Lucida Grande\",sans-serif;font-size:12px;font-weight:800;border-top:1px solid #767676;color:#767676;padding-top:4px;padding-bottom:10px}.boiler-room__logo img{width:100%;height:auto;display:block}</style><link rel=\"stylesheet\" type=\"text/css\" href=\"https://s3.amazonaws.com/gdn-cdn/embed/webwewant/www-gu-type.css\">\n<script src=\"https://interactive.guim.co.uk/libs/iframe-messenger/iframeMessenger.js\"></script>\n<script>\n    iframeMessenger.enableAutoResize();\n</script>\n<div class=\"boiler-room__wrapper\">\n  <div class=\"boiler-room__text\">\n    In partnership with\n  </div>\n  <div class=\"boiler-room__logo\">\n    <img src=\"https://interactive.guim.co.uk/embed/article-embeds/BoilerRoom/hashed/boiler_room.99852726.png\">\n  </div>\n</div>\n</div>",
-  "previous": "",
-  "refreshStatus": true,
-  "url": "https://www.theguardian.com/music/series/gateways",
-  "headline": "Boiler Room",
-  "trailText": "we’re collaborating with Boiler Room on a new series, Gateways, that explores the spreading strands of Nigerian music"
-}

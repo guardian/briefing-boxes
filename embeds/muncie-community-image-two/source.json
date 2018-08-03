@@ -1,8 +1,0 @@
-{
-  "html": "<div class=\"muncie-community-image-two__wrapper\"><style>.background-image,.wrapper{width:100%}h1{font-size:24px;margin:0;padding:0}@media all and (min-width:61.25em){h1{font-size:32px}}h2{font-size:18px;font-weight:400}.wrapper{font-family:\"Guardian Egyptian Web\",Georgia,serif;color:#fff;position:relative;background-color:#333}.background-image img{width:100%;margin-bottom:-3px}@media all and (max-width:29.99em){.background-image{opacity:.7}}.headline{position:absolute;bottom:10px;margin-left:12px;width:90%}@media all and (min-width:61.25em){h2{font-size:24px}.headline{width:50%}}</style><link rel=\"stylesheet\" type=\"text/css\" href=\"https://s3.amazonaws.com/gdn-cdn/embed/webwewant/www-gu-type.css\">\n<script src=\"https://interactive.guim.co.uk/libs/iframe-messenger/iframeMessenger.js\"></script>\n<script>\n    iframeMessenger.enableAutoResize();\n</script>\n<div class=\"wrapper\">\n  <div class=\"background-image\">\n    <img src=\"https://uploads.guim.co.uk/2016/11/02/Jeannine.jpg\">\n  </div>\n  <div class=\"headline\">\n    <h1>Jeannine Lee Lake</h1>\n    <h1>47</h1>\n  </div>\n</div>\n</div>",
-  "previous": "",
-  "refreshStatus": true,
-  "url": "https://www.theguardian.com",
-  "headline": "The Guardian",
-  "trailText": "Latest news, sport and comment from the Guardian"
-}

@@ -1,8 +1,0 @@
-{
-  "html": "<div class=\"spotify__wrapper\"><style>body{font-family:\"Guardian Egyptian Web\",Georgia,serif;color:#005689;background-color:#fdeef1}</style><html>\n<head>\n</head>\n<body class=\"spotify-callback type-system-slab\">\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"https://s3.amazonaws.com/gdn-cdn/embed/webwewant/www-gu-type.css\">\n\t<div class=\"site-wrapper\">\n\t\t<div class=\"site-wrapper-inner\">\n\t\t\t<div id=\"creating\" style=\"text-align: center;\">\n\t\t\t\t<h1>Searching playlists...</h1>\n\t\t\t</div>\n\t\t\t<div id=\"done\" style=\"display: none; text-align: center;\">\n\t\t\t\t<h1>Done!</h1>\n\t\t\t\t<p>\n\t\t\t\t\t<a class=\"btn\" id=\"playlistlink\">Open playlist in Spotify</a>\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script>\n\t<script type=\"text/javascript\" src=\"https://interactive.guim.co.uk/embed/article-embeds/spotify/hashed/jquery_spotify_add_playlist.9ef2c729.js\"></script>\n</body>\n</html>\n</div>",
-  "previous": "",
-  "refreshStatus": true,
-  "url": "https://www.theguardian.com",
-  "headline": "The Guardian",
-  "trailText": "Latest news, sport and comment from the Guardian"
-}
